@@ -19,7 +19,7 @@ def fetch_daily_news():
             category="politics",
             language="en",
             paginate=True,
-            max_pages=5  #5 pages with 10 articles each
+            max_pages=1  #5 pages with 10 articles each
         )
 
         cleaned_articles = []
