@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="fastapi" />
+          <option value="uvicorn" />
+          <option value="python-multipart" />
+          <option value="sqlalchemy" />
+          <option value="psycopg2-binary" />
+          <option value="alembic" />
+          <option value="pymongo" />
+          <option value="motor" />
+          <option value="pydantic" />
+          <option value="pydantic-settings" />
+          <option value="email-validator" />
+          <option value="python-dotenv" />
+          <option value="httpx" />
+          <option value="requests" />
+          <option value="pandas" />
+          <option value="numpy" />
+          <option value="python-dateutil" />
+          <option value="pytest" />
+          <option value="pytest-asyncio" />
+          <option value="black" />
+          <option value="flake8" />
+          <option value="mypy" />
+          <option value="mkdocs" />
+          <option value="mkdocs-material" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tuple.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

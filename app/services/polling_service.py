@@ -43,14 +43,15 @@ def fetch_polling_data():
         df = pd.DataFrame(poll_data, columns=column_names)
 
         #clean and rename columns
-        #I checked the Wikipedia file and these are the exact column names they use:
-        #date, Pollster, Lab, Con, Rfm
         df = df.rename(columns={
-            'date': 'Date',
-            'Lab': 'Labour',
-            'Con': 'Conservatives',
-            'Rfm': 'Reform'
+            'polldate': 'Date',
+            'LAB': 'Labour',
+            'CON': 'Conservatives',
+            'RFM': 'Reform'
         })
+
+        if 'Pollster' not in df.columns:
+            df['Pollster'] = 'Unknown'
 
         #keep only the columns that are needed
         df = df[['Date', 'Pollster', 'Labour', 'Conservatives', 'Reform']]
