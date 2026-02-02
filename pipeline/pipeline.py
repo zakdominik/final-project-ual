@@ -18,15 +18,13 @@ def run_pipeline():
         #load article
         article_obj = loader.load_article(db, clean_data)
 
-        #if new: enrich it with party classification and sentiment score
+        # if new: enrich it with party classification and sentiment score
         if article_obj:
-            #transform: openai model
-            ai_scores = transformer.enrich_with_ai(clean_data)
-            #load: save scores into db
-            if ai_scores:
-                for party_name, score in ai_scores.items():
-                    eval_data = {'party': party_name,'sentiment': score}
-                    loader.load_evaluation(db, article_obj.id, eval_data)
+            # transform: openai model returns ONE dict: {"party": "Name", "sentiment": 0.0}
+            ai_result = transformer.enrich_with_ai(clean_data)
+            # load: save the single result into db
+            if ai_result and ai_result.get('party') != "Other":
+                loader.load_evaluation(db, article_obj.id, ai_result)
 
     #extract: poll data
     raw_polls = extractor.extract_polls()
