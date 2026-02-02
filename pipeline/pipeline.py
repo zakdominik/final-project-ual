@@ -1,5 +1,8 @@
 from app.database.database import SessionLocal
-import extractor, transformer, loader, analysis
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from app.pipeline import extractor, transformer, loader, analysis
 
 
 def run_pipeline():
