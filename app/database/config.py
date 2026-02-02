@@ -1,12 +1,7 @@
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
-#loads env file
 load_dotenv()
 
-#database connection information
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-#gets api keys
-OPENAI_API_KEY = os.getenv("OPENAI_KEY")
-NEWSDATA_API_KEY = os.getenv("NEWSDATA_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_KEY") # Make sure Heroku var name matches this string ("OPENAI_KEY")
+NEWSDATA_API_KEY = os.getenv("NEWSDATA_KEY") # Make sure Heroku var name matches this string ("NEWSDATA_KEY")
