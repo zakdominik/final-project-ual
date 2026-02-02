@@ -12,7 +12,7 @@ def analyze_article_sentiment(headline: str, snippet: str):
         "You are a political data analyst. Analyze the UK news headline and snippet. "
         "1. Identify the primary party the article influences (Options: 'Labour', 'Conservatives', 'Reform'). "
         "If none or multiple equally, choose 'Other'. "
-        "2. Provide a sentiment score from -1.0 (very negative/critical) to +1.0 (very positive/supportive) for how much it influences that party in terms of public sentiment. "
+        "2. Provide a sentiment score from -1.0 (very negative/critical) to +1.0 (very positive/supportive). "
         "3. Output strictly in JSON format: {\"party\": \"Name\", \"sentiment\": 0.0}"
     )
     #input to be classified
