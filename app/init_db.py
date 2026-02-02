@@ -1,6 +1,8 @@
 import sys
 import os
 from app.database.database import engine, Base
+from app.models.sql_models import Party, Source, Article, ArticleEvaluated, Poll, DailyData, Result
+
 #adds the project root to the path so python can find app
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
